@@ -1,0 +1,3 @@
+export const BOOKMARK_ACTION_TYPES = {
+    SET_BOOKMARK: 'SET_BOOKMARK'
+}

@@ -1,0 +1,3 @@
+export const FAVORITE_ACTION_TYPES = {
+    SET_FAVORITES: 'SET_FAVORITES'
+}

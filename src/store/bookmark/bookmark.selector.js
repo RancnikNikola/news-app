@@ -1,0 +1,1 @@
+export const selectBookmarks = (state) => state.bookmarks.bookmarks;
