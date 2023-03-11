@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
+import Article from "../article/article.component";
 
 const Item = () => {
 
