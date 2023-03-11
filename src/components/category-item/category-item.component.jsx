@@ -2,7 +2,7 @@
 const CategoryItem = ({ item }) => {
     return (
         <div className="category-item">
-            <h2>{item.title}</h2>
+            <h2>{item.name}</h2>
         </div>
     )
 }

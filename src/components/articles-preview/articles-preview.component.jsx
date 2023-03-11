@@ -10,7 +10,7 @@ const ArticlesPreview = () => {
     const articles = useSelector(selectArticles);
     const searchField = useSelector(selectSearchField)
     const filteredArticles = articles.filter(article => {
-        return article.title.toLowerCase().includes(searchField.toLowerCase())
+        return article.name.toLowerCase().includes(searchField.toLowerCase())
     })
 
     return (

@@ -13,7 +13,7 @@ const Favorites = () => {
                     <div key={favorite.id}>
                         <span>
                             <Link to={`/${favorite.category}/${favorite.id}`}>
-                                <h2>{favorite.title}</h2>
+                                <h2>{favorite.name}</h2>
                             </Link>
                         </span>
                     </div>

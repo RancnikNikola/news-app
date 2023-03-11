@@ -2,7 +2,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
-import Article from "../article/article.component";
 
 const Item = () => {
 
@@ -10,14 +9,12 @@ const Item = () => {
     const articles = useSelector(selectArticles);
 
     const currentItem = articles.find(items => {
-        return items.id === parseInt(itemId) && items.category === category
+        return items.id === itemId && items.category === category
     })
-    console.log(currentItem);
-
 
     return (
         <div className="item">
-            <h2>{currentItem.title}</h2>
+            <h2>{currentItem.name}</h2>
         </div>
     )
 }

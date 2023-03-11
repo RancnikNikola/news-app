@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setArticles } from './store/articles/article.actions';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/navigation/navigation.component';
@@ -7,7 +7,7 @@ import Home from './pages/home/home.page';
 import CategoriesPreview from './components/categories-preview/categories-preview.component';
 import Item from './components/item/item.component';
 import Favorites from './pages/favorites/favorites.page';
-import Bookmarks from './pages/bookmarks/bookmarks.component';
+import Bookmarks from './pages/bookmarks/bookmarks.page';
 import './App.css';
 
 const App = () => {
@@ -16,16 +16,16 @@ const App = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      fetch("https://dummyjson.com/products?limit=50")
+      fetch('https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=37043181d485475aa319b3c0af1b5e5d')
       .then(res => {
-        return res.json();
+        return res.json()
       })
       .then(data => {
-       dispatch(setArticles(data['products']))
+        dispatch(setArticles(data['sources']))
       })
     }
     getArticles();
-    }, []);
+  }, []);
 
 
   return (

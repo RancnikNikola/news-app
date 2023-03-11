@@ -9,7 +9,7 @@ export const bookmarkReducer = (state = BOOKMARK_INITIAL_STATE, action) => {
 
     switch(type) {
         case BOOKMARK_ACTION_TYPES.SET_BOOKMARK:
-            return {...state, bookmarks: payload}
+            return {state: [], bookmarks: payload}
         default:
             return state
     }

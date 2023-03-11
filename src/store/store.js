@@ -10,7 +10,6 @@ const composedEnhancers = compose(applyMiddleware(...middleWares))
 const persistConfig = {
     key: 'root',
     storage,
-    // blacklist: ['articles']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

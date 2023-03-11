@@ -14,23 +14,28 @@ const Article = ({ article }) => {
     const dispatch = useDispatch();
 
     const onClickFavorite = (articleId) => {
-        const artId = articles[articleId];
-        dispatch(setFavorites([...favorites, artId]));
+        const clickedArticle = articles.find(articles => {
+            return articles.id === articleId
+        })    
+        dispatch(setFavorites([...favorites, clickedArticle]));
       }
 
     const onClickBookmark = (itemId) => {
-         const itemLocation = `${window.location.href}${articles[itemId].category}/${itemId}`;
-         dispatch(setBookmark([...bookmarks, itemLocation]))
+        const clickedArticle = articles.find(articles => {
+            return articles.id === itemId
+        })
+        const itemLocation = `${window.location.href}${clickedArticle.category}/${itemId}`;
+        dispatch(setBookmark([...bookmarks, itemLocation]))  
     }
 
     return (
         <div className="article">
             <span>
                 <Link to={`${article.category}/${article.id}`}>
-                    {article.title}
+                    {article.name}
                 </Link>
             </span>
-            <button onClick={() => onClickFavorite(article.id -1 )}>Add to favorites</button>
+            <button onClick={() => onClickFavorite(article.id)}>Add to favorites</button>
             <button onClick={() => onClickBookmark(article.id)}>Bookmark</button>
         </div>
     )

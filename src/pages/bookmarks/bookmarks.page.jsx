@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 const Bookmarks = () => {
 
     const bookmarks = useSelector(selectBookmarks);
-    console.log(bookmarks)
 
     return (
         <div className="bookmarks">
             {
-                bookmarks && bookmarks.map((bookmark) => (
-                    <Link key={bookmark.id} to={bookmark}>{bookmark}</Link>
+                bookmarks && bookmarks.map((bookmark, id) => (
+                    <Link key={id} to={bookmark}>{bookmark}</Link>
                 ))
             }
         </div>
