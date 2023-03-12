@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
-import CategorySideBarItems from "../category-side-bar-items/category.side-bar-items.component";
+import CategorySideBarItems from "../category-side-bar-items/category-side-bar-items.component";
 import { Link } from "react-router-dom";
+import './categories-side-bar.styles.scss';
 
 const CategoriesSideBar = () => {
 

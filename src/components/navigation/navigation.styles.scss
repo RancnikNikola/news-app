@@ -1,0 +1,95 @@
+.navigation {
+    width: 100%;
+    
+    .navigation-top {
+        background-color: red;
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        align-items: center;
+
+        .navigation-first-text {
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        .navigation-second-text {
+            color: whitesmoke;
+        }
+
+        .navigation-buttons {
+
+            .button-get {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                background-color: whitesmoke;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+
+            .button-no-thanks {
+                color: whitesmoke;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .navigation-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: darkgreen;
+
+        .logo {
+
+            font-size: 40px;
+            font-weight: bold;
+
+            .my {
+                color: red;
+            }
+        }
+
+        .search {
+            width: 80%;
+            position: relative;
+
+            span {
+                position: absolute;
+                left: 2%;
+                top: 32%;
+                font-size: 30px;
+            }
+
+            .search-bar {
+                width: 60%;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                padding: 20px 50px;
+                margin: 20px;
+                outline-style: none;
+                font-size: 20px;
+            }
+
+            button {
+                background-color: red;
+                position: absolute;
+                right: 39%;
+                top: 30%;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: whitesmoke;
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

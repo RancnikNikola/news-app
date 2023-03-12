@@ -2,6 +2,8 @@ import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { setSearchField } from "../../store/search-field/search-field.action";
 import { useDispatch } from "react-redux";
+import { AiOutlineSearch } from "react-icons/ai";
+import './navigation.styles.scss';
 
 const Navigation = () => {
 
@@ -15,18 +17,21 @@ const Navigation = () => {
         <Fragment>
             <div className="navigation">
                 <div className="navigation-top">
-                    <span>Make MyNews your homepage</span>
-                    <span>Every day discover what's trending on the internet!</span>
+                    <span className="navigation-first-text">Make MyNews your homepage</span>
+                    <span className="navigation-second-text">Every day discover what's trending on the internet!</span>
                     <div className="navigation-buttons">
-                        <Link>get</Link>
-                        <Link>no, thanks</Link>
+                        <Link className="button-get">get</Link>
+                        <Link className="button-no-thanks">No, thanks</Link>
                     </div>
                 </div>
                 <div className="navigation-bottom">
-                    <div className="navigation-logo">
-                        <h1>MyNews</h1>
-                        <span>O</span>
-                        <input onChange={onSearchChange} type='search' placeholder='Search news' />
+                    <div className="logo">
+                        <span className="my">My</span>
+                        <span>News</span>
+                    </div>
+                    <div className="search">
+                        <span><AiOutlineSearch /></span>
+                        <input className="search-bar" onChange={onSearchChange} type='search' placeholder='Search news' />
                         <button>search</button>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../store/articles/article.selector';
+import './latest-news.styles.scss';
 
 const LatestNews = () => {
 

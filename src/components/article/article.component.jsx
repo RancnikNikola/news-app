@@ -5,6 +5,7 @@ import { setFavorites } from '../../store/favorites/favorite.action';
 import { setBookmark } from '../../store/bookmark/bookmark.action';
 import { selectFavorites } from "../../store/favorites/favorite.selector";
 import { selectBookmarks } from '../../store/bookmark/bookmark.selector';
+import './article.styles.scss';
 
 const Article = ({ article }) => {
 
