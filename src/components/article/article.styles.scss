@@ -1,6 +1,50 @@
 .article {
-    background-color: aquamarine;
+    background-color: white;
     width: 30%;
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px lightgray;
+
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .article-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .favorite {
+            font-size: 40px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .bookmark {
+            font-size: 35px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+    }
+
+    .article-text {
+        padding-left: 10px;
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: blue;
+        }
+    }
 }

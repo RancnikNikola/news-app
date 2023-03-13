@@ -1,3 +1,16 @@
 .categories-preview {
     background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+
+    .close-btn {
+        position: absolute;
+        right: 0;
+    }
+
+    .favorite-bookmarks-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
 }

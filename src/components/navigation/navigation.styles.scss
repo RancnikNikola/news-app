@@ -41,11 +41,11 @@
     .navigation-bottom {
         display: flex;
         align-items: center;
+        flex-direction: row;
         justify-content: flex-end;
-        background-color: darkgreen;
+        border-bottom: 1px solid lightgrey;
 
         .logo {
-
             font-size: 40px;
             font-weight: bold;
 
@@ -63,6 +63,7 @@
                 left: 2%;
                 top: 32%;
                 font-size: 30px;
+                color: grey;
             }
 
             .search-bar {

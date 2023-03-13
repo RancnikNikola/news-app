@@ -1,3 +1,17 @@
 .category {
     background-color: darkmagenta;
+    display: flex;
+    padding-left: 10px;
+    color: gray;
+
+    a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
 }

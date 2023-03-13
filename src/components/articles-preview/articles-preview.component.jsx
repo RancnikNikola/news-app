@@ -16,10 +16,10 @@ const ArticlesPreview = () => {
 
     return (
         <div className="articles-preview">
-            <LatestNews />
+            <LatestNews className="articles-latest" />
             {
-                filteredArticles.map((article) => (
-                    <Article key={article.id} article={article} />
+                filteredArticles.map((article, idx) => (
+                    <Article key={article.id} article={article} idx={idx} />
                 ))
             }
           

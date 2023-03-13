@@ -27,12 +27,13 @@ const LatestNews = () => {
     return (
         <>
         <div className='latest-news'>
+            <h2><span className="dot"></span>Latest News</h2>
             {
                 articles && articles.slice(0, limit).map((article, index) => {
                     if (limitedArticles.length === index + 1) {
-                        return <h3 ref={lastElementRef} key={article.id}>{article.name}</h3>
+                        return <h4 ref={lastElementRef} key={article.id}>{article.name}</h4>
                     } else {
-                        return <h3 key={article.id}>{article.name} title</h3>
+                        return <h4 key={article.id}>{article.name}</h4>
                     }
                 })
             }

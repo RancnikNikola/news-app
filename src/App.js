@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setArticles } from './store/articles/article.actions';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/navigation/navigation.component';
@@ -9,6 +9,7 @@ import Item from './components/item/item.component';
 import Favorites from './pages/favorites/favorites.page';
 import Bookmarks from './pages/bookmarks/bookmarks.page';
 import './App.css';
+import Latest from './pages/latest/latest.page';
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path=':category' element={ <CategoriesPreview /> } />
         <Route path='/:category/:itemId' element={ <Item /> } />
         <Route path='/bookmarks' element={ <Bookmarks />} />
+        <Route path='/latest' element={ <Latest />} />
       </Route>
     </Routes>
   );
