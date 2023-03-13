@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
-import { selectHamburger } from "../../store/hamburger/hamburger.selector";
 import CategorySideBarItems from "../category-side-bar-items/category-side-bar-items.component";
 import { Link } from "react-router-dom";
 import { FiMonitor } from 'react-icons/fi';

@@ -6,6 +6,7 @@ import { selectHamburger } from '../../store/hamburger/hamburger.selector';
 import { setIsHamburgerOpen } from '../../store/hamburger/hamburger.action';
 import { AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from 'react-icons/im'
 import './navigation.styles.scss';
 
 const Navigation = () => {
@@ -17,7 +18,7 @@ const Navigation = () => {
         dispatch(setSearchField(event.target.value));
     }
 
-    const onClickOpenHamburger = () => dispatch(setIsHamburgerOpen(false));
+    const onClickOpenHamburger = () => dispatch(setIsHamburgerOpen(!isHamburgerOpen));
 
     return (
         <Fragment>
@@ -32,18 +33,25 @@ const Navigation = () => {
                 </div>
                 <div className="navigation-bottom">
                     <div className="logo">
-                        <span className="my">My<span>News</span></span>
+                        <div className="my">My<span>News</span></div>
+                        <button onClick={onClickOpenHamburger}>
+                            {isHamburgerOpen ? (
+                                <ImCross className="hamburger-icon" />
+                                ) : (
+                                <GiHamburgerMenu className="hamburger-icon"/>
+                            )}
+                        </button>
                     </div>
                     <div className="search">
                         <span><AiOutlineSearch /></span>
                         <input className="search-bar" onChange={onSearchChange} type='search' placeholder='Search news' />
                         <button>search</button>
                     </div>
-                    <GiHamburgerMenu className="hamburger-menu" onClick={onClickOpenHamburger}/>
+                    
                 </div>
                 <div className="navigation-links">
-                    <Link to='/' className="link-featured">Featured</Link>
-                    <Link to='/latest' className="link-latest">Latest</Link>
+                    <Link to='/' className="links"><span>Featured</span></Link>
+                    <Link to='/latest' className="links"><span>Latest</span></Link>
                 </div>
             </div>
             <Outlet />

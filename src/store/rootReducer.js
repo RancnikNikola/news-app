@@ -10,5 +10,5 @@ export const rootReducer = combineReducers({
     searchField: searchFieldReducer,
     favorites: favoritesReducer,
     bookmarks: bookmarkReducer,
-    // isHamburgerOpen: hamburgerReducer
+    isHamburgerOpen: hamburgerReducer
 });

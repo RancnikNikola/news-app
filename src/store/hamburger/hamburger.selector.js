@@ -1,1 +1,1 @@
-export const selectHamburger = (state) => state.isHamburgerOpen;
+export const selectHamburger = (state) => state.isHamburgerOpen.isHamburgerOpen;

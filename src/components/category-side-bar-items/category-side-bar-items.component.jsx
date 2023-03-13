@@ -7,8 +7,8 @@ const CategorySideBarItems = ({ category, icon, id }) => {
         <div className="category">
             <span>
                 <Link to={`${category}`}>
-                    {icon[id].name}
-                    {category}
+                    <h3 className="category-icon">{icon[id].name}</h3>
+                    <p>{category}</p>
                 </Link>
             </span>
         </div>

@@ -94,3 +94,66 @@
 
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+    .navigation {
+
+        .navigation-top {
+            display: none;
+       }
+
+       .navigation-bottom {
+            flex-direction: column;
+
+            .logo {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .hamburger-icon {
+                display: block;
+            }
+
+        .search {
+
+            span {
+                left: 7%;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+       }
+
+       .navigation-links {
+            display: flex;
+            justify-content: center;
+            
+            .links {
+                text-decoration: none;
+                margin: 20px;
+                font-weight: bold;
+
+                background-color: darkgoldenrod;
+                padding: 20px 10px;
+                border-radius: 25px;
+                background: rgba(255, 165, 165, 0.5);
+
+                span {
+                    color: red;
+                }
+            }
+       }
+    }
+
+}

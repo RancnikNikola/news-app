@@ -1,7 +1,7 @@
 .latest-news {
     overflow-y: scroll;
-    height: 400px;
-    width: 30%;
+    height: 300px;
+    width: 25%;
     background-color: white;
     border-radius: 10px;
     margin: 20px;
@@ -28,4 +28,16 @@
         padding: 10px;
         margin: 10px;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .latest-news {
+        // display: none;
+        width: 80%;
+        padding: 10px 0;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+   }
 }

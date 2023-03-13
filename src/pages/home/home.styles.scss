@@ -1,11 +1,16 @@
 .homepage {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
  }
 
- .dwa {
-    position: absolute;
-    left: 10%;
-    margin: 20px;
-    font-size: 20px;
-    font-weight: bold;
- }
+ 
+@media only screen and (max-width: 600px) {
+
+    .homepage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+}
