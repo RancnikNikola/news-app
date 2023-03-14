@@ -2,25 +2,24 @@ import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
 import CategorySideBarItems from "../category-side-bar-items/category-side-bar-items.component";
 import { Link, NavLink } from "react-router-dom";
-import { FiMonitor } from 'react-icons/fi';
-import { BsBriefcase } from 'react-icons/bs';
-import { GiHealthNormal, GiMaterialsScience } from 'react-icons/gi';
-import { MdOutlineSportsSoccer } from 'react-icons/md';
-import { RiFilePaper2Line } from 'react-icons/ri';
 import { AiFillHome } from 'react-icons/ai';
+import { FiMonitor } from 'react-icons/fi';
+import { BsBriefcase, BsMusicNoteBeamed } from 'react-icons/bs';
+import { GiHealthNormal, GiPotionBall } from 'react-icons/gi';
+import { BiFootball } from 'react-icons/bi';
+import { RiNewspaperLine } from 'react-icons/ri';
 import './category-menu.styles.scss';
 
 const CategoryMenu = () => {
 
     const icons = [
-        { id: 0, name: <FiMonitor/>},
-        { id: 1, name: <BsBriefcase/>},
-        { id: 2, name: <GiHealthNormal/> },
-        { id: 3, name: <GiMaterialsScience />},
-        { id: 4, name: <MdOutlineSportsSoccer/> },
-        { id: 5, name: <RiFilePaper2Line/> },
-        { id: 6, name: <RiFilePaper2Line />},
-        { id: 7, name: <RiFilePaper2Line />},
+        { id: 0, name: <RiNewspaperLine/>},
+        { id: 1, name: <FiMonitor/>},
+        { id: 2, name: <BsBriefcase/> },
+        { id: 3, name: <BiFootball />},
+        { id: 4, name: <BsMusicNoteBeamed/> },
+        { id: 5, name: <GiHealthNormal/> },
+        { id: 6, name: <GiPotionBall />},
       ];
 
     const articles = useSelector(selectArticles);

@@ -13,6 +13,11 @@
   }
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-web/Inter-Medium.woff") format("woff");
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../store/articles/article.selector';
+import { Link } from 'react-router-dom';
 import './latest-news.styles.scss';
 
 const LatestNews = () => {
@@ -31,9 +32,9 @@ const LatestNews = () => {
             {
                 articles && articles.slice(0, limit).map((article, index) => {
                     if (limitedArticles.length === index + 1) {
-                        return <h4 ref={lastElementRef} key={article.id}>{article.name}</h4>
+                        return <Link to={`${article.category}/${article.id}`}><h4 ref={lastElementRef} key={article.id}>{article.name}</h4></Link>
                     } else {
-                        return <h4 key={article.id}>{article.name}</h4>
+                        return <Link to={`${article.category}/${article.id}`}><h4 key={article.id}>{article.name}</h4></Link>
                     }
                 })
             }

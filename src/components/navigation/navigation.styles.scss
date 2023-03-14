@@ -6,7 +6,7 @@
     }
     
     .navigation-top {
-        background-color: red;
+        background-color: rgb(174, 1, 1);
         display: flex;
         justify-content: space-around;
         height: 60px;
@@ -58,7 +58,18 @@
             }
 
             .my {
-                color: red;
+                color: rgb(174, 1, 1);
+                font-size: 40px;
+                font-weight: bold;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(174, 1, 1);
+                }
+
+                span {
+                    color: black;
+                }
             }
         }
 
@@ -86,7 +97,7 @@
             }
 
             button {
-                background-color: red;
+                background-color: rgb(174, 1, 1);
                 position: absolute;
                 right: 39%;
                 top: 30%;
@@ -164,12 +175,12 @@
                 background: transparent;
 
                 span {
-                    color: red;
+                    color: rgb(174, 1, 1);
                 }
             }
 
             .active {
-                background-color: darkgoldenrod;
+                color: rgb(174, 1, 1);
                 padding: 10px 15px;
                 border-radius: 25px;
                 background: rgba(255, 165, 165, 0.5);

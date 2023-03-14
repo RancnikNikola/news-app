@@ -1,7 +1,6 @@
 
 import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
-import { selectSearchField } from '../../store/search-field/search-field.selector';
 import { selectHamburger } from "../../store/hamburger/hamburger.selector";
 import { selectSearchArticles } from '../../store/search-articles/search-articles.selector';
 import Article from "../article/article.component";
@@ -25,11 +24,6 @@ const ArticlesPreview = () => {
     })
     const categoryItems = articles.filter(item => item.category === category);
     const isHamburgerOpen = useSelector(selectHamburger);
-
-    // console.log('INNER HEIGHT', window.innerHeight);
-
-    // console.log('INNER WIDTH', window.innerWidth);
-
 
     useEffect(() => {
         const updateWindowDimensions = () => {
@@ -55,7 +49,6 @@ const ArticlesPreview = () => {
         <div className="articles-preview">
             {
                 screenSize < 900 ? (
-                    // <LatestNews className="articles-latest" />
                     <></>
                 ) : (
                     <LatestNews className="articles-latest" />

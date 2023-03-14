@@ -10,13 +10,17 @@ const Favorites = () => {
         <div className="favorites">
             {
                 favorites && favorites.map((favorite) => (
-                    <div key={favorite.id}>
+                    <div key={favorite.id} className="item">
                         <span>
                             <Link to={`/${favorite.category}/${favorite.id}`}>
                                 <h2>{favorite.name}</h2>
                             </Link>
                         </span>
-                    </div>
+                            <img src={`https://source.unsplash.com/random/400x200/?img=${favorite.id}`} alt="image" />
+                            <span>{favorite.id}</span>
+                            <h4>{favorite.category}</h4>
+                            <p>{favorite.description}</p>
+                        </div>
                 ))
             }
         </div>

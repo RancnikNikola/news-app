@@ -21,6 +21,7 @@ const Article = ({ article, idx }) => {
             return articles.id === articleId
         })    
         dispatch(setFavorites([...favorites, clickedArticle]));
+        alert('Added to favorites');
       }
 
     const onClickBookmark = (itemId) => {
@@ -29,6 +30,7 @@ const Article = ({ article, idx }) => {
         })
         const itemLocation = `${window.location.href}${clickedArticle.category}/${itemId}`;
         dispatch(setBookmark([...bookmarks, itemLocation]))  
+        alert('Article bookmarked');
     }
 
     return (

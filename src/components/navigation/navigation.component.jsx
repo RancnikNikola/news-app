@@ -48,7 +48,9 @@ const Navigation = () => {
                 </div>
                 <div className="navigation-bottom">
                     <div className="logo">
-                        <div className="my">My<span>News</span></div>
+                        <h1 className="my">
+                            <Link to='/'>My<span>News</span></Link>
+                        </h1>
                         <button onClick={onClickOpenHamburger} className="dropdown-button">
                             {isHamburgerOpen ? (
                                 <ImCross className="hamburger-icon" />
