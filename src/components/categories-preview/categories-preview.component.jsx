@@ -15,14 +15,14 @@ const CategoriesPreview = () => {
     return (
         <div className="categories-preview">
             {
-                categoryItems.map((categoryItem) => (
-                    <span key={categoryItem.id}>
-                        <Link to={`${categoryItem.id}`}>
-                            <CategoryItem item={categoryItem} />
-                        </Link>
-                    </span>
-                    
-                ))
+                    categoryItems.map((categoryItem) => (
+                        <span key={categoryItem.id}>
+                            <Link to={`${categoryItem.id}`}>
+                                <CategoryItem item={categoryItem} />
+                            </Link>
+                        </span>
+                        
+                    ))               
             }
         </div>
     )

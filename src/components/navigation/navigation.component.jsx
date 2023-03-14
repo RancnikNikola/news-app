@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { setSearchField } from "../../store/search-field/search-field.action";
+import { selectSearchField } from '../../store/search-field/search-field.selector';
+import { setSearchArticles } from '../../store/search-articles/search-articles.action';
 import { useDispatch, useSelector } from "react-redux";
 import { selectHamburger } from '../../store/hamburger/hamburger.selector';
 import { setIsHamburgerOpen } from '../../store/hamburger/hamburger.action';
@@ -14,8 +16,21 @@ const Navigation = () => {
     const dispatch = useDispatch();
     const isHamburgerOpen = useSelector(selectHamburger);
 
-    const onSearchChange = (event) => {
-        dispatch(setSearchField(event.target.value));
+    const onSearchChange = () => {
+        dispatch(setSearchArticles(searchField))
+    }    
+
+    const onSearchKeyPress = (e) => {
+        if(e.key === 'Enter'){
+            dispatch(setSearchArticles(searchField))
+        }
+      
+    }    
+    
+    const searchField = useSelector(selectSearchField)
+
+    const handleChange = (event) => {
+        dispatch(setSearchField(event.target.value))
     }
 
     const onClickOpenHamburger = () => dispatch(setIsHamburgerOpen(!isHamburgerOpen));
@@ -44,8 +59,8 @@ const Navigation = () => {
                     </div>
                     <div className="search">
                         <span><AiOutlineSearch /></span>
-                        <input className="search-bar" type='search' placeholder='Search news' onChange={onSearchChange} />
-                        <button>search</button>
+                        <input className="search-bar" type='search' placeholder='Search news' onChange={handleChange} onKeyDown={onSearchKeyPress}/>
+                        <button onClick={onSearchChange} value={searchField}>search</button>
                     </div>
                     
                 </div>
