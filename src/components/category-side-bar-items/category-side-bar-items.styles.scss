@@ -7,10 +7,9 @@
     text-align: center;
 
     span {
-        background-color: white;
-        width: 100%;
+        width: 80%;
         margin: 5px;
-        border-radius: 5px;
+
     }
 
     a {
@@ -31,6 +30,11 @@
             color: red;
         }
     }
+}
+
+.category span a.active {
+    border-radius: 5px;
+    background-color: white;
 }
 
 

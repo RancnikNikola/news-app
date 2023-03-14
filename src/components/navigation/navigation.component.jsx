@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import { setSearchField } from "../../store/search-field/search-field.action";
 import { useDispatch, useSelector } from "react-redux";
 import { selectHamburger } from '../../store/hamburger/hamburger.selector';
@@ -34,7 +34,7 @@ const Navigation = () => {
                 <div className="navigation-bottom">
                     <div className="logo">
                         <div className="my">My<span>News</span></div>
-                        <button onClick={onClickOpenHamburger}>
+                        <button onClick={onClickOpenHamburger} className="dropdown-button">
                             {isHamburgerOpen ? (
                                 <ImCross className="hamburger-icon" />
                                 ) : (
@@ -44,14 +44,14 @@ const Navigation = () => {
                     </div>
                     <div className="search">
                         <span><AiOutlineSearch /></span>
-                        <input className="search-bar" onChange={onSearchChange} type='search' placeholder='Search news' />
+                        <input className="search-bar" type='search' placeholder='Search news' onChange={onSearchChange} />
                         <button>search</button>
                     </div>
                     
                 </div>
                 <div className="navigation-links">
-                    <Link to='/' className="links"><span>Featured</span></Link>
-                    <Link to='/latest' className="links"><span>Latest</span></Link>
+                    <NavLink to="/" className="links">Featured</NavLink>
+                    <NavLink to='/latest' className="links"><span>Latest</span></NavLink>
                 </div>
             </div>
             <Outlet />

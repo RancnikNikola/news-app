@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './category-side-bar-items.styles.scss';
 
 const CategorySideBarItems = ({ category, icon, id }) => {
@@ -6,10 +6,10 @@ const CategorySideBarItems = ({ category, icon, id }) => {
     return (
         <div className="category">
             <span>
-                <Link to={`${category}`}>
+                <NavLink to={`/${category}`}>
                     <h3 className="category-icon">{icon[id].name}</h3>
                     <p>{category}</p>
-                </Link>
+                </NavLink>
             </span>
         </div>
     )

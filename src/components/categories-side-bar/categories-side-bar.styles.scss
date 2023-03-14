@@ -1,7 +1,7 @@
 .categories-preview {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: row;
+    
     .close-btn {
         position: absolute;
         right: 0;
@@ -37,12 +37,16 @@
 
 @media only screen and (max-width: 600px) {
     .categories-preview {
-        // display: none;
-        background-color: bisque;
+        display: flex;
+        background-color: whitesmoke;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 400px;
+        width: 100%;
+        height: 100%;
         position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
 
         .favorite-bookmarks-container {
             display: flex;

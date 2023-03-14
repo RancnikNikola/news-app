@@ -1,5 +1,9 @@
 .navigation {
     width: 100%;
+
+    .navigation-links {
+        display: none;
+    }
     
     .navigation-top {
         background-color: red;
@@ -48,6 +52,10 @@
         .logo {
             font-size: 40px;
             font-weight: bold;
+
+            .dropdown-button {
+                display: none;
+            }
 
             .my {
                 color: red;
@@ -112,6 +120,13 @@
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 10px;
+
+                .dropdown-button {
+                    display: block;
+                    font-size: 25px;
+                    background-color: transparent;
+                    border: none;
+                }
             }
 
             .hamburger-icon {
@@ -143,16 +158,22 @@
                 text-decoration: none;
                 margin: 20px;
                 font-weight: bold;
-
                 background-color: darkgoldenrod;
-                padding: 20px 10px;
+                padding: 10px 10px;
                 border-radius: 25px;
-                background: rgba(255, 165, 165, 0.5);
+                background: transparent;
 
                 span {
                     color: red;
                 }
             }
+
+            .active {
+                background-color: darkgoldenrod;
+                padding: 10px 15px;
+                border-radius: 25px;
+                background: rgba(255, 165, 165, 0.5);
+              }
        }
     }
 

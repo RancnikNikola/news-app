@@ -31,10 +31,12 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path='/' element={ <Navigation /> }>
-        <Route index element={ <Home /> } />
+      <Route element={ <Navigation /> }>
+        <Route path='/' element={ <Home /> }>
+          <Route path=':category' element={ <CategoriesPreview /> } />
+        </Route>
         <Route path='/favorites' element={ <Favorites /> } />
-        <Route path=':category' element={ <CategoriesPreview /> } />
+        
         <Route path='/:category/:itemId' element={ <Item /> } />
         <Route path='/bookmarks' element={ <Bookmarks />} />
         <Route path='/latest' element={ <Latest />} />

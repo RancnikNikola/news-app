@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectArticles } from "../../store/articles/article.selector";
 import { Link } from "react-router-dom";
 import CategoryItem from "../category-item/category-item.component";
+// import './categories-preview.styles.scss';
 
 const CategoriesPreview = () => {
 
