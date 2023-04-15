@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+Home page of the App
+<img width="1440" alt="Screenshot 2023-04-15 at 07 42 41" src="https://user-images.githubusercontent.com/35330678/232187135-4e5541b0-627d-4304-9ddf-ab9694a008e2.png">
+
+Responsive home page
+<img width="497" alt="Screenshot 2023-04-15 at 07 43 02" src="https://user-images.githubusercontent.com/35330678/232187144-e3c566b0-0e42-48d8-8849-633b59eaf5bd.png">
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
